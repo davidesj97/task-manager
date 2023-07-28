@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+    font-family: "open sans";
+}
+.conta{
+    font-family: Georgia;
+    color: rgb(138, 52, 219);
+    
+}
