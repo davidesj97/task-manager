@@ -2,13 +2,99 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  
 }
-body{
+body {
     font-family: "open sans";
+    
+}
+.cont-principal {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  border: 1px solid black;
+  margin: 0px auto;
 }
 .conta{
-    font-family: Georgia;
-    color: rgb(138, 52, 219);
+  /*font-size: 20px;
+  text-align: center;
+  font-size: 24px;*/
+    font-weight: 400;
+    margin: 0;
+    padding: 48px;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid black  ;
     
+
+}
+.barra{
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+
+}
+.barra input{
+  /*text-align: center;*/
+  margin: 50px auto;
+  width: 65%;
+  height: 50px;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(6, 6, 10);
+  cursor: text;
+}
+.input{
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  outline: none;
+  font-size: 25px;
+}
+
+.input:focus {
+  -webkit-transition: 0.1s;
+  transition: 0.5s;
+}
+.contendor-boton{
+  width: 35%;
+  display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.boton {
+  background-color: #3a98f6;
+  color: #fdfdfd;
+  border: #f0f0f0;
+  width: 50%;
+  font-weight: bold;
+  font-size:20px ;
+  padding: 8px 4px;
+  box-shadow: 3px 3px rgb(179, 179, 179);
+  cursor: pointer;
+
+}
+
+.bloc{
+  background-color: beige;
+  text-align: center;
+  margin: 50px auto;
+  width: 700px;
+  height: 600px;
+  border: 2px solid rgb(6, 6, 10);
+  border-radius: 0.9375em;
+  width: 90%;
+
+}
+.asig{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
 }
