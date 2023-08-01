@@ -4,7 +4,8 @@
     <title>Asignar Tareas</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="css_1/stiyle.css" />
-</head>
+    <script src="index.js"></script>
+  </head>
   <body>
     <main class="cont-principal">
         <div class="conta">
@@ -14,13 +15,13 @@
           </h1>
         </div>
     <div class="barra">
-      <input type= "text"name=" text"class="input" placeholder="Agrega nueva tarea..."/>
+      <input type="text" name=" text" id="inputTarea" class="input" placeholder="Agrega nueva tarea..."/>
       <div class="contendor-boton"> 
-        <button class="boton" onclick="EnviarTarea()">Agregar</button>
+        <button class="boton" id="botonEnviar" onclick="EnviarTarea()">Agregar</button>
       </div>
     </div>
     <div class="bloc">
-      <p id="tareas">sdfsfsdfsd</p>
+      <ul id="tareas"></ul>
     </div>
   </main>
   </body>
