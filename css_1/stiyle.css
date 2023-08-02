@@ -110,6 +110,17 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  /*display: none;*/
+  
+}
+ #checkboxg1 img{
+  /*float: right;*/
+  position: absolute;
+  width: 50px;
+  border: 5px solid transparent;
+  top:8% ;
+  left: 85%;
+  
 }
 
 #checkboxr1 input[type=checkbox]{
@@ -122,6 +133,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  display: none;
 }
 
 #checkboxg2 input[type=checkbox]{
