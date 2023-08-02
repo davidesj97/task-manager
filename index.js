@@ -12,13 +12,12 @@ function EnviarTarea() {
     ]
     contadorId++;
     inputTarea.value = "";
-    CrearElemento()
+    CrearElemento();
+    contadorTareasTotales();
 }
 
 function CrearElemento() {
     const ulElement = document.querySelector('ul');
-
-    // Paso 2: Eliminar todos los li
     while (ulElement.firstChild) {
         ulElement.removeChild(ulElement.firstChild);
     }
@@ -39,4 +38,10 @@ function CrearElemento() {
         ulElement.appendChild(li).appendChild(imgCompletar);
         ulElement.appendChild(li).appendChild(imgEliminar);
     }
+}
+
+function contadorTareasTotales() {
+    const tareasTotales = tareas.length;
+    elementoTareasTotales = document.getElementById("tareas-totales");
+    elementoTareasTotales.innerText = tareasTotales;
 }
