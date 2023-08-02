@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 90%;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin: 0px auto;
 }
 .conta{
@@ -27,9 +27,8 @@ body {
     text-align: center;
     font-size: 20px;
     border-bottom: 1px solid black  ;
-    
-
 }
+
 .barra{
   display: flex;
   width: 85%;
@@ -63,8 +62,8 @@ body {
 .contendor-boton{
   width: 35%;
   display: flex;
- align-items: center;
- justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .boton {
@@ -82,15 +81,97 @@ body {
 
 .bloc{
   background-color: beige;
-  text-align: center;
+  text-align: left;
   margin: 50px auto;
-  width: 700px;
-  height: 600px;
+  height: auto;
   border: 2px solid rgb(6, 6, 10);
   border-radius: 0.9375em;
-  width: 90%;
+  width: 60%;
+  padding: 15px;
+  position: relative;
+  box-shadow: 7px 7px rgb(172, 170, 170);
 
 }
+
+#tareas{
+  /*border: 1px solid black;*/
+  width: 90%;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+#checkboxg1 input[type=checkbox]{
+  width: 5%;
+  height:25px; 
+  position:absolute;
+  top: 10%;
+  left: 94%;
+  display:block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#checkboxr1 input[type=checkbox]{
+  width: 5%;
+  height:25px; 
+  position:absolute;
+  top: 10%;
+  left: 85%;
+  display:block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#checkboxg2 input[type=checkbox]{
+  width: 5%;
+  height:25px; 
+  position:absolute;
+  top: 42%;
+  left: 94%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#checkboxr2 input[type=checkbox]{
+  width: 5%;
+  height:25px; 
+  position:absolute;
+  top: 42%;
+  left: 85%;
+  display:block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#checkboxg3 input[type=checkbox]{
+  width: 5%;
+  height:25px; 
+  position:absolute;
+  top: 75%;
+  left: 94%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#checkboxr3 input[type=checkbox]{
+  width: 5%;
+  height:25px; 
+  position:absolute;
+  top: 75%;
+  left: 85%;
+  display:block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/*
 .asig{
   display: block;
   margin-bottom: 10px;
@@ -98,3 +179,4 @@ body {
   font-weight: bold;
   text-align: center;
 }
+*/
