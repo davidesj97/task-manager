@@ -6,16 +6,18 @@
 }
 body {
     font-family: "open sans";
-    
+    background-color: #3a98f6;
 }
 .cont-principal {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 80%;
   /*border: 1px solid black;*/
   margin: 0px auto;
+  background-color: #ffffff;
+  height: 100vh;
 }
 .conta{
   /*font-size: 20px;
@@ -105,6 +107,7 @@ body {
   border: 1px solid #bebebe;
   background-color: #ffffff;
   padding: 10px;
+  margin: 16px 0;
 }
 
 .texto-tarea {

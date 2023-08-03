@@ -23,12 +23,13 @@ function CompletarTarea(id) {
     if (tarea) {
         tarea.completada = true;
         CrearElemento();
+        listarTareasCompletadas()
         contadorTareasCompletadas();
     }
 }
 
 function CrearElemento() {
-    const ulElement = document.querySelector('ul');
+    const ulElement = document.querySelector('#tareas-creadas');
     while (ulElement.firstChild) {
         ulElement.removeChild(ulElement.firstChild);
     }
@@ -77,14 +78,29 @@ function contadorTareasCompletadas() {
     elementoTareasCompletadas.innerText = tareasCompletadas
 }
 
-function listarTareasCompletadas () {
-    let listaTareasCompletas = [];
+function listarTareasCompletadas() {
+    const ulElement = document.querySelector('#tareas-completadas');
+    while (ulElement.firstChild) {
+        ulElement.removeChild(ulElement.firstChild);
+    }
     tareasCreadas.forEach(tarea => {
         if(tarea.completada === true) {
-            listaTareasCompletas = [
-                ...listaTareasCompletas,
-                tarea
-            ]
+            let li = document.createElement('li');
+            let p = document.createElement('p');
+            let imgEliminar = document.createElement('img');
+            let botonEliminar = document.createElement('div')
+
+            imgEliminar.src = 'imagenes2/icons8-trash-30.png'
+
+            li.setAttribute("id", tarea.id);
+            li.setAttribute("class", "tarea");
+            p.setAttribute("class", "texto-tarea");
+            botonEliminar.setAttribute("class", "btnEliminar");
+            imgEliminar.setAttribute("class", "icon-eliminar");
+
+            p.appendChild(document.createTextNode(tarea.texto));
+            ulElement.appendChild(li).appendChild(p);
+            ulElement.appendChild(li).appendChild(botonEliminar).appendChild(imgEliminar);
         }
     })
 }
