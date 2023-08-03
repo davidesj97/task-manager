@@ -183,6 +183,32 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
+.tarea {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #bebebe;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.texto-tarea {
+  width: 80%;
+}
+
+.btnCompletar {
+  width: 36px;
+  height: 36px;
+  background-color: rgb(19, 182, 19);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-completar {
+  width: 20px;
+}
 /*
 .asig{
   display: block;
