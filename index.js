@@ -30,11 +30,20 @@ function CompletarTarea(id) {
 
 function CrearElemento() {
     const ulElement = document.querySelector('#tareas-creadas');
-    while (ulElement.firstChild) {
+    let tareasPendientes = []
+    while (ulElement?.firstChild) {
         ulElement.removeChild(ulElement.firstChild);
     }
     tareasCreadas.forEach(tarea => {
         if(!tarea.completada) {
+            tareasPendientes = [
+                ...tareasPendientes,
+                tarea
+            ]
+        }
+    })
+    if(tareasPendientes.length != 0) {
+        tareasPendientes.forEach(tarea => {
             let li = document.createElement('li');
             let p = document.createElement('p');
             let imgCompletar = document.createElement('img');
@@ -57,8 +66,12 @@ function CrearElemento() {
             ulElement.appendChild(li).appendChild(p);
             ulElement.appendChild(li).appendChild(botonCompletar).appendChild(imgCompletar);
             ulElement.appendChild(li).appendChild(botonEliminar).appendChild(imgEliminar);
-        }
-    })
+        })
+    } else {
+        let p = document.createElement('p');
+        p.appendChild(document.createTextNode("No hay tareas pendientes"));
+        ulElement.appendChild(p);
+    }
 }
 
 function contadorTareasTotales() {
@@ -104,3 +117,6 @@ function listarTareasCompletadas() {
         }
     })
 }
+
+
+CrearElemento();
