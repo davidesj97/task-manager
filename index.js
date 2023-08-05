@@ -1,9 +1,27 @@
 let tareasCreadas = [];
 let tareasCompletas = [];
 let contadorId = 0;
+// Adjuntar el evento "input" para seguir controlando el estado del botón mientras el usuario escribe.
+const inputTarea = document.getElementById("inputTarea");
+inputTarea.addEventListener("input", actualizarEstadoBoton);
+
+
+function actualizarEstadoBoton() {
+    const inputTarea = document.getElementById("inputTarea");
+    const boton = document.getElementById("botonEnviar");
+    
+    if (inputTarea.value === "") {
+        boton.setAttribute("disabled", true);
+        boton.classList.add("bloqueado");
+    } else {
+        boton.removeAttribute("disabled");
+        boton.classList.remove("bloqueado")
+    }
+}
+
 
 function EnviarTarea() {
-    inputTarea = document.getElementById("inputTarea");
+    let inputTarea = document.getElementById("inputTarea");
     tareasCreadas = [
         ...tareasCreadas,
         {
@@ -16,6 +34,7 @@ function EnviarTarea() {
     inputTarea.value = "";
     CrearElemento();
     contadorTareasTotales();
+    actualizarEstadoBoton();
 }
 
 function CompletarTarea(id) {
@@ -132,5 +151,5 @@ function listarTareasCompletadas() {
     })
 }
 
-
+actualizarEstadoBoton();
 CrearElemento();
