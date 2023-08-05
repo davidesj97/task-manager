@@ -23,9 +23,19 @@ function CompletarTarea(id) {
     if (tarea) {
         tarea.completada = true;
         CrearElemento();
-        listarTareasCompletadas()
+        contadorTareasTotales();
         contadorTareasCompletadas();
+        listarTareasCompletadas();
     }
+}
+
+function EliminarTarea(id) {
+    const indexTarea = tareasCreadas.findIndex(tarea => tarea.id === id);
+    tareasCreadas.splice(indexTarea, 1);
+    CrearElemento();
+    contadorTareasTotales();
+    contadorTareasCompletadas();
+    listarTareasCompletadas();
 }
 
 function CrearElemento() {
@@ -50,8 +60,9 @@ function CrearElemento() {
             let imgEliminar = document.createElement('img');
             let botonCompletar = document.createElement('div')
             let botonEliminar = document.createElement('div')
+            botonCompletar.addEventListener("click", () => CompletarTarea(tarea.id))
+            botonEliminar.addEventListener("click", () => EliminarTarea(tarea.id))
             imgCompletar.src = 'imagenes2/icons8-tick-30.png'
-            imgCompletar.addEventListener("click", () => CompletarTarea(tarea.id))
             imgEliminar.src = 'imagenes2/icons8-trash-30.png'
     
             li.setAttribute("id", tarea.id);
@@ -69,6 +80,7 @@ function CrearElemento() {
         })
     } else {
         let p = document.createElement('p');
+        p.setAttribute("class", "lista-vacia")
         p.appendChild(document.createTextNode("No hay tareas pendientes"));
         ulElement.appendChild(p);
     }
@@ -76,6 +88,7 @@ function CrearElemento() {
 
 function contadorTareasTotales() {
     const tareasTotales = tareasCreadas.length;
+    console.log(tareasTotales)
     let elementoTareasTotales = document.getElementById("tareas-totales");
     elementoTareasTotales.innerText = tareasTotales;
 }
@@ -101,14 +114,15 @@ function listarTareasCompletadas() {
             let li = document.createElement('li');
             let p = document.createElement('p');
             let imgEliminar = document.createElement('img');
-            let botonEliminar = document.createElement('div')
-
+            let botonEliminar = document.createElement('div');
+            
             imgEliminar.src = 'imagenes2/icons8-trash-30.png'
-
+            
             li.setAttribute("id", tarea.id);
             li.setAttribute("class", "tarea");
             p.setAttribute("class", "texto-tarea");
             botonEliminar.setAttribute("class", "btnEliminar");
+            botonEliminar.addEventListener("click", () => EliminarTarea(tarea.id))
             imgEliminar.setAttribute("class", "icon-eliminar");
 
             p.appendChild(document.createTextNode(tarea.texto));
