@@ -200,3 +200,10 @@ body {
 .bloqueado:hover{
   background-color: #9c9c9c;
 }
+.lista-vacia{
+  font-family: cursive;
+  color: green;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
