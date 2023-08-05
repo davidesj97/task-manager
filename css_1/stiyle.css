@@ -6,24 +6,30 @@
 }
 body {
     font-family: "open sans";
-    
+    background-color: rgb(14, 107, 116);
+  
 }
 .cont-principal {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  /*border: 1px solid black;*/
-  margin: 0px auto;
+  width: 60%;
+  height: calc(100vh - 40px);
+  margin: 20px auto;
+  background-color:#f3f3f3;
+  border: 2px solid black;
+  border-radius: 10px;
+
 }
 .conta{
   /*font-size: 20px;
   text-align: center;
   font-size: 24px;*/
-    font-weight: 400;
-    margin: 0;
-    padding: 48px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium';
+    margin: 15px;
+    padding: 15px ;
     text-align: center;
     font-size: 20px;
     border-bottom: 1px solid black  ;
@@ -31,8 +37,10 @@ body {
 
 .barra{
   display: flex;
-  width: 85%;
+  width: 75%;
   justify-content: space-between;
+  padding: 2px 20px;
+  /* border: 1px solid black; */
 
 }
 .barra input{
@@ -45,7 +53,7 @@ body {
   cursor: text;
 }
 .input{
-  font-weight: 500;
+  font-weight: 200;
   font-size: 14px;
   height: 40px;
   padding-left: 10px;
@@ -70,27 +78,49 @@ body {
   background-color: #3a98f6;
   color: #fdfdfd;
   border: #f0f0f0;
-  width: 50%;
+  width: 50% auto;
   font-weight: bold;
-  font-size:20px ;
-  padding: 8px 4px;
+  font-size: 21px ;
+  padding: 8px 4px ;
   box-shadow: 3px 3px rgb(179, 179, 179);
   cursor: pointer;
-
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+.boton:hover{
+  background-color: rgb(43, 113, 226) ;
+}
+.bloc{
+  background-color: rgb(240, 240, 237); 
+  text-align: left;
+  margin: 50px ;
+  height: 57%;
+  width: 70%;
+  border: 1px solid rgb(6, 6, 10);
+  border-radius: 4px; 
+  padding: 15px;  
+  position: relative;
+  overflow: scroll;
+}
+.bloc::-webkit-scrollbar{
+ width: 10px;
 }
 
-.bloc{
-  background-color: beige;
-  text-align: left;
-  margin: 50px auto;
-  height: auto;
-  border: 2px solid rgb(6, 6, 10);
-  border-radius: 0.9375em;
-  width: 60%;
-  padding: 15px;
-  position: relative;
-  box-shadow: 7px 7px rgb(172, 170, 170);
+.bloc::-webkit-scrollbar-thumb{
+  background-color:  rgb(14, 107, 116);
+  border-radius: 3px;
+} 
 
+.bloc::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(37, 148, 158) ;
+}
+
+.bloc::-webkit-scrollbar-corner{
+  background-color:  rgb(14, 107, 116);
+}
+.bloc::-webkit-scrollbar-track-piece{
+  border: 1px solid #dbd9d9;
 }
 
 #tareas{
@@ -98,13 +128,16 @@ body {
   width: 90%;
   font-family: cursive;
   font-size: 20px;
+  padding-left: 30px ;
+  
 }
 .tarea {
   display: flex;
   justify-content: space-around;
   border: 1px solid #bebebe;
-  background-color: #ffffff;
-  padding: 10px;
+  background-color: #ffffff; 
+  padding: 2px;
+  margin: 10px 0px;
 }
 
 .texto-tarea {
@@ -114,22 +147,35 @@ body {
 .btnCompletar {
   width: 36px;
   height: 36px;
-  background-color: rgb(19, 182, 19);
+  background-color: rgb(38, 141, 38);
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+}
+.btnCompletar:hover{
+  background-color:rgb(7, 206, 7);
+
+}
+.btnEliminar{
+  width: 36px;
+  height: 36px;
+  background-color: rgb(137, 30, 30);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
 
+.btnEliminar:hover{
+  background-color: rgb(228, 15, 15);
+
+}
 .icon-completar {
   width: 20px;
 }
-/*
-.asig{
-  display: block;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-*/
