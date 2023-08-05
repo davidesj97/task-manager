@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Asignar Tareas</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css_1/stiyle.css" />
-    <script src="index.js"></script>
+
+<head>
+  <title>Asignar Tareas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css_1/stiyle.css" />
 </head>
-  <body>
-    <main class="cont-principal">
-        <div class="conta">
-          <h1>
-            Tareas completadas: <span id="tarea-compl">0</span> faltan
-            <span id="tareas-totales"> 0</span>
-          </h1>
-        </div>
+
+<body>
+  <main class="cont-principal">
+    <div class="conta">
+      <h1>
+        Tareas completadas: <span id="tarea-compl">0</span> faltan
+        <span id="tareas-totales"> 0</span>
+      </h1>
+    </div>
     <div class="barra">
       <input type="text" name=" text" id="inputTarea" class="input" placeholder="Agrega nueva tarea..."/>
       <div class="contendor-boton"> 
@@ -22,8 +23,18 @@
       </div>
     </div>
     <div class="bloc">
-      <ul id="tareas"></ul>
+      <div class="contenedor_tareas-creadas">
+        <h2>Tareas pendientes</h2>
+        <ul id="tareas-creadas">
+        </ul>
+      </div>
+      <div class="contenedor_tareas-completadas">
+        <h2>Tareas completadas</h2>
+        <ul id="tareas-completadas"></ul>
+      </div>
     </div>
   </main>
-  </body>
+  <script src="index.js"></script>
+</body>
+
 </html>
